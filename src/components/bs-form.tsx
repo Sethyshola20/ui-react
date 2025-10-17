@@ -16,7 +16,7 @@ import { Input } from "./ui/input";
 import { Slider } from "./ui/slider";
 import { toast } from "sonner";
 import { BSParams, optionFormSchema } from "@/types/options";
-import { paramsEqual } from "@/utlis.index";
+import { paramsEqual } from "@/utlis";
 import { priceOptionUseCase } from "@/use-cases/options"; 
 import { DualPricing } from "@/types/options";
 

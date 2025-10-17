@@ -7,7 +7,7 @@ import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "
 import { Input } from "./ui/input";
 import { Slider } from "./ui/slider";
 import { toast } from "sonner";
-import { paramsEqual } from "@/utlis.index";
+import { paramsEqual } from "@/utlis";
 import { priceOptionUseCase } from "@/use-cases/options";
 import { BSParams } from "@/types/options";
 
@@ -97,6 +97,7 @@ export default function BinomialTreeForm({ onResult }: { onResult?: (res: any) =
       lastSentRef.current = params;
 
       try {
+
         const [callRes, putRes] = await Promise.all([
           priceOptionUseCase({ data: { ...params, type: "call" } }),
           priceOptionUseCase({ data: { ...params, type: "put" } }),

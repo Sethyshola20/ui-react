@@ -1,4 +1,4 @@
-import { BSParams } from "./types/options";
+import { BSParams } from "../types/options";
 
 export function paramsEqual(a: Partial<BSParams>, b: Partial<BSParams>) {
   return (
@@ -7,6 +7,7 @@ export function paramsEqual(a: Partial<BSParams>, b: Partial<BSParams>) {
     a.rate === b.rate &&
     a.volatility === b.volatility &&
     a.maturity === b.maturity &&
-    a.type === b.type
+    a.type === b.type &&
+    a.steps === b.steps
   );
 }
