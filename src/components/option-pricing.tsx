@@ -14,19 +14,15 @@ export default function OptionPricingDashboard() {
   return (
     <div className="flex min-h-screen w-full">
       <aside className="w-100 p-6 border-r flex flex-col">
-        <Tabs value={pricer} onValueChange={v => setPricer(v as "bs" | "binomial")}>
+        {/**<Tabs value={pricer} onValueChange={v => setPricer(v as "bs" | "binomial")}>
           <TabsList className="items-center flex gap-2 ">
             <TabsTrigger value="bs">European</TabsTrigger>
             <TabsTrigger value="binomial">American</TabsTrigger>
           </TabsList>
-        </Tabs>
+        </Tabs> */}
 
         <div className="mt-8 flex-1">
-          {pricer === "bs" ? (
             <BSForm onResult={setResult} />
-          ) : (
-            <BinomialTreeForm onResult={setResult} />
-          )}
         </div>
       </aside>
 
@@ -56,10 +52,10 @@ export default function OptionPricingDashboard() {
               </div>
             </div>
 
-            <OptionPriceHeatmap
+            {/*<OptionPriceHeatmap
               pricer={pricer}
               params={result.call}
-            />
+            /> */}
           </>
         )}
       </main>
